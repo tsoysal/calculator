@@ -54,7 +54,7 @@ function handleOperators(btnText) {
         case '+-':
             display.innerText *= -1;
             break; 
-        case '<-':
+        case 'del':
             display.innerText = display.innerText.slice(0, display.innerText.length -1);
             break;
         case '.':
