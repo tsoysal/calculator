@@ -1,3 +1,5 @@
+// Dark/Light mode
+
 const body = document.querySelector('body')
 const toggleBtn = document.querySelector('#darkLightMode');
 const lightBtn = toggleBtn.firstElementChild;
@@ -15,9 +17,15 @@ darkBtn.addEventListener('click', () => {
     lightBtn.classList.remove('active');
 })
 
+// Display buttons
+
 const display = document.querySelector('#display');
 const miniDisplay = document.querySelector('.miniDisplay');
 
 const buttons = document.querySelectorAll('button');
 
-buttons.forEach((btn) => console.log(btn))
+function handleBtnClick(btn) {
+    display.innerText += btn.innerText;
+}
+
+buttons.forEach((btn) => btn.addEventListener('click', () => handleBtnClick(btn)))
